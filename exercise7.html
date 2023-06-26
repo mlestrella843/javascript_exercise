@@ -11,9 +11,16 @@
     <button onclick="startTemporizer()">Choose Time</button>
     <h1 id="textAlarm" style="color: red;">The Alarm is OFF</h1>
 
+    <!-- Adding an alarm -->
+
+    <audio id="audioAlarm"  src="Alarma (Nuevotono.Net).mp3" type="audio/mpeg">
+        Audio OFF
+    </audio>
+
     <script>
         let timeChoosed = document.getElementById("timeChoosed");
         let textAlarm = document.getElementById("textAlarm");
+        let audioAlarm = document.getElementById("audioAlarm");
 
         function startTemporizer(){
             setTimeout( timeDone, 1000 * timeChoosed.value);
@@ -22,6 +29,7 @@
         function timeDone(){
             textAlarm.textContent = "The Alarma is ON";
             textAlarm.style.color = "green";
+            audioAlarm.play();
         }
 
     </script>
