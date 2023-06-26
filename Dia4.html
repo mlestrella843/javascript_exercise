@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Enter your variables</p>
+    <input type="text" id="greetingUser">
+    <button onclick="greetingUser()">Greeting User</button>
+
+    <script>
+
+        function greetingUser(){
+            // let varNombre = document.getElementById("greetingUser").value;
+            // alert( "Hello " + varNombre );
+
+            //Otra forma de hacerlo, es especificandola el valor en la variable
+            let varNombre = document.getElementById("greetingUser");
+            alert( "Hello " + varNombre.value );
+        }
+    </script>
+    
+</body>
+</html>
