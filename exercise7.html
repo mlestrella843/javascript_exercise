@@ -11,11 +11,20 @@
     <button onclick="startTemporizer()">Choose Time</button>
     <h1 id="textAlarm" style="color: red;">The Alarm is OFF</h1>
 
-    <!-- Adding an alarm -->
+    <!-- Adding audio to an alarm using id-->
 
     <audio id="audioAlarm"  src="Alarma (Nuevotono.Net).mp3" type="audio/mpeg">
         Audio OFF
     </audio>
+
+     <!-- Adding audio to alarm using controls but without programming yet-->
+
+     <audio controls  src="Alarma (Nuevotono.Net).mp3" type="audio/mpeg">
+        Audio OFF
+     </audio>
+
+
+
 
     <script>
         let timeChoosed = document.getElementById("timeChoosed");
@@ -31,6 +40,20 @@
             textAlarm.style.color = "green";
             audioAlarm.play();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
  
