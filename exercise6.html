@@ -13,11 +13,22 @@
 
     <script>
         function mostrarUsuario(){
+            // let nombreUsuario = document.getElementById("username");
+            // let elementoTexto = document.getElementById("salidaNombre");
+
+            // //Aqui se accesa el texto que tiene este id de H1 y se sustituye poe esta frase mas la variable
+            // elementoTexto.textContent = "Tu te llamas " + nombreUsuario.value;
+
+
+            //Otra forma es entrando la frase en una variable 
+
             let nombreUsuario = document.getElementById("username");
             let elementoTexto = document.getElementById("salidaNombre");
+            let mensaje = "Tu te llamas " + nombreUsuario.value;
 
             //Aqui se accesa el texto que tiene este id de H1 y se sustituye poe esta frase mas la variable
-            elementoTexto.textContent = "Tu te llamas " + nombreUsuario.value;
+            elementoTexto.textContent = mensaje;
+
         }
     </script>  
 </body>
