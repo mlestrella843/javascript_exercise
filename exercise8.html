@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startWatch()">
+
+    <input type="number" id="timeChoosed">
+    <button onclick="startTemporizer()">Choose Time</button>
+    <h1 id="textAlarm">00:00:00</h1>
+
+    <!-- Adding audio to an alarm using id-->
+
+    <audio id="audioAlarm"  src="Alarma (Nuevotono.Net).mp3" type="audio/mpeg">
+        Audio OFF
+    </audio>
+
+     <!-- Adding audio to alarm using controls but without programming yet-->
+
+     <audio controls  src="Alarma (Nuevotono.Net).mp3" type="audio/mpeg">
+        Audio OFF
+     </audio>
+
+    <script>
+        let timeChoosed = document.getElementById("timeChoosed");
+        let textAlarm = document.getElementById("textAlarm");
+        let audioAlarm = document.getElementById("audioAlarm");
+
+        function startTemporizer(){
+            setTimeout( timeDone, 1000 * timeChoosed.value);
+        }
+
+        function timeDone(){
+            textAlarm.style.color = "green";
+            audioAlarm.play();
+        }
+
+        function startWatch(){
+            setInterval(ticTac, 1000);
+        }
+
+        function ticTac(){
+            let timeActual = new Date();
+            let hours = timeActual.getHours();
+            let minutes = timeActual.getMinutes();
+            //que sea de dos dogitos si es menor de dos, y que comience con 0 delante
+            let seconds = String(timeActual.getSeconds()).padStart(2,"0");
+
+            let textHour = hours + ":" + minutes + ":" + seconds;
+
+            textAlarm.textContent = textHour;
+
+
+
+
+        }
+    </script>
+ 
+</body>
+</html>
