@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+</head>
+<body>
+
+    <input type="number" id="timeChoosed">
+    <button onclick="startTemporizer()">Choose Time</button>
+    <h1 id="textAlarm" style="color: red;">The Alarm is OFF</h1>
+
+    <script>
+        let timeChoosed = document.getElementById("timeChoosed");
+        let textAlarm = document.getElementById("textAlarm");
+
+        function startTemporizer(){
+            setTimeout( timeDone, 1000 * timeChoosed.value);
+        }
+
+        function timeDone(){
+            textAlarm.textContent = "The Alarma is ON";
+            textAlarm.style.color = "green";
+        }
+
+    </script>
+ 
+</body>
+</html>
